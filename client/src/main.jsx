@@ -7,6 +7,7 @@ import App from "./App";
 import HomePage from "./pages/HomePage";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import ReviewPage from "./pages/ReviewPage";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
         path: "/review-page",
         id: "review-page",
         element: <ReviewPage />,
+      },
+      {
+        path: "/login-page",
+        id: "login-page",
+        element: <LoginPage />,
       },
     ],
   },
