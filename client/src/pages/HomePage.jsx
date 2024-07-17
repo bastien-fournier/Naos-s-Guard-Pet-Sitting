@@ -14,7 +14,7 @@ export default function HomePage() {
       <div>
         <BodyHomePage />
       </div>
-      <div className="flex justify-center gap-7">
+      <div className="flex justify-center gap-7 mt-1">
         <ButtonReview />
         <ButtonSignUp />
       </div>

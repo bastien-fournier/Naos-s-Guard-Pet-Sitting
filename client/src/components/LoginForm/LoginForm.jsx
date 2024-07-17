@@ -30,7 +30,6 @@ export default function LoginForm() {
 
         credentials: "include",
       });
-      // console.log(response);
 
       if (response.status === 200) {
         const user = await response.json();
@@ -50,41 +49,50 @@ export default function LoginForm() {
   };
 
   return (
-    <div>
+    <div className="flex border flex-col text-center">
       <div>
         <p>Me connecter</p>
       </div>
-      <form method="post" onSubmit={handleSubmit}>
-        <div>
-          <input
-            aria-required="true"
-            type="email"
-            id="email"
-            name="email"
-            value={loginInfos.email}
-            onChange={(e) =>
-              setLoginInfos({ ...loginInfos, email: e.target.value })
-            }
-            placeholder="Email"
-          />
-        </div>
-        <div>
-          <input
-            autoComplete="new-password"
-            aria-required="true"
-            type="password"
-            id="password"
-            name="password"
-            value={loginInfos.password}
-            onChange={(e) =>
-              setLoginInfos({ ...loginInfos, password: e.target.value })
-            }
-            placeholder="Mot de passe"
-          />
-        </div>
-        {errors && <div>{errors}</div>}
-        <button type="submit">Soumettre</button>
-      </form>
+      <div>
+        <form method="post" onSubmit={handleSubmit}>
+          <div>
+            <input
+              className="border border-black"
+              aria-required="true"
+              type="email"
+              id="email"
+              name="email"
+              value={loginInfos.email}
+              onChange={(e) =>
+                setLoginInfos({ ...loginInfos, email: e.target.value })
+              }
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <input
+              className="border border-black"
+              autoComplete="new-password"
+              aria-required="true"
+              type="password"
+              id="password"
+              name="password"
+              value={loginInfos.password}
+              onChange={(e) =>
+                setLoginInfos({ ...loginInfos, password: e.target.value })
+              }
+              placeholder="Mot de passe"
+            />
+          </div>
+          {errors && <div>{errors}</div>}
+          <button
+            className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary"
+            type="submit"
+          >
+            Soumettre
+          </button>
+        </form>
+      </div>
       <p>
         Pas encore de compte ?&nbsp;
         <Link to="/signUpPage">M'inscrire</Link>
