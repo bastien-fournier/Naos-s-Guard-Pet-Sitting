@@ -4,3 +4,8 @@
   box-sizing: border-box;
   background-color: #fceed5;
 }
+
+:root {
+  --primary-color: #fceed5;
+  --secondary-color: #003459;
+}

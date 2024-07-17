@@ -1,3 +1,4 @@
+import BodyHomePage from "../components/BodyHomePage/BodyHomePage";
 import ButtonLogin from "../components/Buttons/ButtonLogin";
 import ButtonReview from "../components/Buttons/ButtonReview";
 import ButtonSignUp from "../components/Buttons/ButtonSignUp";
@@ -9,6 +10,9 @@ export default function HomePage() {
       <div className="flex justify-between">
         <Logo />
         <ButtonLogin />
+      </div>
+      <div>
+        <BodyHomePage />
       </div>
       <div className="flex justify-center gap-7">
         <ButtonReview />
