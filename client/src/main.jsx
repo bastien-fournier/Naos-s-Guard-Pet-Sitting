@@ -10,6 +10,8 @@ import ReviewPage from "./pages/ReviewPage";
 import LoginPage from "./pages/LoginPage";
 import ProfilPage from "./pages/ProfilPage";
 
+const ApiUrl = import.meta.env.VITE_API_URL;
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -28,6 +30,7 @@ const router = createBrowserRouter([
         path: "/review-page",
         id: "review-page",
         element: <ReviewPage />,
+        loader: async () => fetch(`${ApiUrl}/api/reviews/`),
       },
       {
         path: "/login-page",
