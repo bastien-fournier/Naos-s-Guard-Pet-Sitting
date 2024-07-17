@@ -6,11 +6,13 @@ const AbstractSeeder = require("./AbstractSeeder");
 const reviews = [
   {
     rate: "10",
-    comment: "loved id",
+    comment:
+      "Super bien passé !! Plein de photos et vidéos. Bastien était super avec Dax.",
   },
   {
     rate: "10",
-    comment: "amazing",
+    comment:
+      "Excellente première réservation avec Bastien. Communication très clair, accueil au top pour mon chien Pippin dans son appartement et des nouvelles à la pelle 🤗 je ne peux demander mieux ! Encore merci et à bientôt !!",
   },
 ];
 
