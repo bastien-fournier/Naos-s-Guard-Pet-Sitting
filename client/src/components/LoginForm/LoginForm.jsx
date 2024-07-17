@@ -49,15 +49,15 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex border flex-col text-center">
+    <div className="flex border flex-col text-center bg-white rounded-md ">
       <div>
-        <p>Me connecter</p>
+        <p className="text-secondary">Connexion</p>
       </div>
       <div>
         <form method="post" onSubmit={handleSubmit}>
           <div>
             <input
-              className="border border-black"
+              className="border border-99A2A5 rounded-sm "
               aria-required="true"
               type="email"
               id="email"
@@ -71,7 +71,7 @@ export default function LoginForm() {
           </div>
           <div>
             <input
-              className="border border-black"
+              className="border border-99A2A5 rounded-sm"
               autoComplete="new-password"
               aria-required="true"
               type="password"
@@ -86,16 +86,18 @@ export default function LoginForm() {
           </div>
           {errors && <div>{errors}</div>}
           <button
-            className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary"
+            className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary mt-4"
             type="submit"
           >
-            Soumettre
+            Me connecter
           </button>
         </form>
       </div>
+      <p className="text-secondary">Pas encore de compte ?</p>
       <p>
-        Pas encore de compte ?&nbsp;
-        <Link to="/signUpPage">M'inscrire</Link>
+        <Link className="text-secondary" to="/sign-up-page">
+          M'inscrire
+        </Link>
       </p>
     </div>
   );

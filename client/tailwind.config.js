@@ -13,6 +13,9 @@ export default {
         sans: ["Roboto", "Arial", "sans-serif"], // Définir une police de caractères personnalisée
         // Vous pouvez ajouter d'autres polices personnalisées ici si nécessaire
       },
+      boxShadow: {
+        custom: "0px 5px 15px 5px rgba(0,0,0,0.15)",
+      },
     },
   },
   plugins: [],
