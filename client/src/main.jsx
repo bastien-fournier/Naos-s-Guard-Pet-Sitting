@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import ReviewPage from "./pages/ReviewPage";
 import LoginPage from "./pages/LoginPage";
+import ProfilPage from "./pages/ProfilPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
         path: "/login-page",
         id: "login-page",
         element: <LoginPage />,
+      },
+      {
+        path: "/profil-page",
+        id: "profil-page",
+        element: <ProfilPage />,
       },
     ],
   },

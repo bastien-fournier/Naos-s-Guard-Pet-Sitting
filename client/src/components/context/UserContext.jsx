@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const UserContext = createContext();
+
 export function UserProvider({ children }) {
   const ApiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
@@ -28,9 +29,9 @@ export function UserProvider({ children }) {
       if (response.status === 200) {
         setUser(null);
         navigate(sessionExpired === true ? "/" : "/login-page");
-        // if (sessionExpired === true) {
-        //   notifyFail("Votre session a expiré. Veuillez vous reconnecter.");
-        // }
+        if (sessionExpired === true) {
+          notifyFail("Votre session a expiré. Veuillez vous reconnecter.");
+        }
       }
     } catch (err) {
       // Log des erreurs possibles
@@ -39,11 +40,8 @@ export function UserProvider({ children }) {
     }
   };
 
-  const memo = useMemo(
-    () => ({ user, setUser, login, logout }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [user]
-  );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const memo = useMemo(() => ({ user, setUser, login, logout }), [user]);
 
   return <UserContext.Provider value={memo}>{children}</UserContext.Provider>;
 }
