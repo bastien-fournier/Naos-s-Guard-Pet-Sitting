@@ -9,7 +9,9 @@ create table user (
 create table review (
    id int auto_increment primary key,
    rate int not null check (rate between 1 and 10),
-   comment text
+   comment text,
+   dog_id INT,
+   FOREIGN KEY (dog_id) REFERENCES user(id)
 );
 
 create table dog (
