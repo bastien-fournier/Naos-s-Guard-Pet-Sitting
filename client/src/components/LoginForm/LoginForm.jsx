@@ -35,7 +35,7 @@ export default function LoginForm() {
         const user = await response.json();
         login(user.user);
         navigate("/profil-page");
-        notifySuccess(`Bienvenue ${user.user.username}`);
+        notifySuccess(`Bienvenue ${user.user.firstname}`);
       } else {
         // Gestion des erreurs
         const errorText = await response.text();
