@@ -2,6 +2,7 @@
 // const ItemRepository = require("./models/ItemRepository");
 const UserRepository = require("./models/UserRepository");
 const ReviewRepository = require("./models/ReviewRepository");
+const DogRepository = require("./models/DogRepository");
 // Create an empty object to hold data repositories for different tables
 const tables = {};
 
@@ -12,6 +13,7 @@ const tables = {};
 // Register each repository as data access point for its table
 tables.user = new UserRepository();
 tables.review = new ReviewRepository();
+tables.dog = new DogRepository();
 /* ************************************************************************* */
 
 // Use a Proxy to customize error messages when trying to access a non-existing table

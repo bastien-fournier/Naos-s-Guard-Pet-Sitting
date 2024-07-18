@@ -16,6 +16,6 @@ create table dog (
   id int auto_increment primary key,
   name VARCHAR(100) NOT NULL,
   picture TEXT,
-  user_id INT NOT NULL,
+  user_id INT ,
   FOREIGN KEY (user_id) REFERENCES user(id)
 );
