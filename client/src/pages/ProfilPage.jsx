@@ -6,7 +6,9 @@ import Profil from "../components/Profil/Profil";
 export default function ProfilPage() {
   return (
     <div>
-      <Logo />
+      <div className="flex mr-3 md:hidden">
+        <Logo />
+      </div>
 
       <Profil />
       <ButtonDisconnected />
