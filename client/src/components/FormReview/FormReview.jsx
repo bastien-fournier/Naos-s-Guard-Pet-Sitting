@@ -63,39 +63,61 @@ export default function FormReview() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="comment">Avis</label>
-        <input
-          onChange={handleChange}
-          value={reviewForm.comment}
-          type="text"
-          id="comment"
-          name="comment"
-        />
-        <label htmlFor="rate">Note</label>
-        <select
-          value={reviewForm.rate}
-          name="rate"
-          id="rate"
-          onChange={handleChange}
+    <div className="flex justify-center mt-5 mb-5">
+      <form
+        className="bg-white p-6 rounded shadow-md w-full max-w-xs"
+        onSubmit={handleSubmit}
+      >
+        <div>
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="comment"
+          >
+            Avis
+          </label>
+          <input
+            onChange={handleChange}
+            value={reviewForm.comment}
+            type="text"
+            id="comment"
+            name="comment"
+            className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+          />
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="rate"
+          >
+            Note
+          </label>
+          <select
+            value={reviewForm.rate}
+            name="rate"
+            id="rate"
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+          >
+            <option value="">Sélectionner une note</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        {success && <p style={{ color: "green" }}>{success}</p>}
+        <button
+          className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom mt-5 hover:scale-105 transform transition duration-300"
+          type="submit"
         >
-          <option value="">Sélectionner une note</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
-      <button type="submit">Soumettre</button>
-    </form>
+          Soumettre
+        </button>
+      </form>
+    </div>
   );
 }

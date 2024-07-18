@@ -2,10 +2,7 @@ import Picture from "../../assets/images/picture.png";
 
 export default function BodyHomePage() {
   return (
-    <div
-      className="bg-secondary shadow-custom 
-     text-center rounded-md flex justify-center flex-col mt-5 mx-auto max-w-72  px-3  mb-5 shadow-lg"
-    >
+    <div className="bg-secondary  text-center rounded-md flex justify-center flex-col mt-5 mx-auto px-3 mb-5 shadow-lg w-full  max-w-sm md:max-w-md lg:max-w-lg">
       <h1 className="bg-secondary text-white text-2xl mt-4">
         Naos'Guard Pet-Sitting
       </h1>

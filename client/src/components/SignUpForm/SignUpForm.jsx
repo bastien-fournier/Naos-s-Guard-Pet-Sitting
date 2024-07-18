@@ -47,69 +47,71 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="flex flex-col  mx-auto max-w-sm border bg-white">
-      <form method="POST" onSubmit={handleSubmit}>
-        <div className="my-4  flex items-center flex-col">
-          <div className="mb-4">
-            <label htmlFor="lastname" className="block text-gray-500">
-              Nom de famille
-            </label>
-            <input
-              className="border border-99A2A5 rounded-sm "
-              onChange={handleChange}
-              value={register.lastname}
-              type="text"
-              id="lastname"
-              name="lastname"
-            />
+    <div className="flex justify-center mt-5">
+      <div className="flex flex-col items-center mx-auto max-w-sm border bg-white rounded-lg shadow-md p-4">
+        <form method="POST" onSubmit={handleSubmit}>
+          <div className="mb-4 w-full">
+            <div className="mb-4">
+              <label htmlFor="lastname" className="block text-gray-500">
+                Nom de famille
+              </label>
+              <input
+                className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                onChange={handleChange}
+                value={register.lastname}
+                type="text"
+                id="lastname"
+                name="lastname"
+              />
+            </div>
+            <div className="mb-4 w-full">
+              <label htmlFor="firstname" className="block text-gray-500">
+                Prénom
+              </label>
+              <input
+                className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                onChange={handleChange}
+                value={register.firstname}
+                type="text"
+                id="firstname"
+                name="firstname"
+              />
+            </div>
+            <div className="mb-4 w-full">
+              <label htmlFor="email" className="block text-gray-500">
+                Adresse mail
+              </label>
+              <input
+                className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                onChange={handleChange}
+                value={register.email}
+                type="text"
+                id="email"
+                name="email"
+              />
+            </div>
+            <div className="mb-4 w-full">
+              <label htmlFor="password" className="block text-gray-500">
+                Mot de passe
+              </label>
+              <input
+                className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                onChange={handleChange}
+                value={register.password}
+                type="password"
+                id="password"
+                name="password"
+              />
+            </div>
+            <button
+              className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom mt-5 hover:scale-105 transform transition duration-300"
+              type="submit"
+            >
+              Submit
+            </button>
           </div>
-          <div className="mb-4">
-            <label htmlFor="firstname" className="block text-gray-500">
-              Prénom
-            </label>
-            <input
-              className="border border-99A2A5 rounded-sm "
-              onChange={handleChange}
-              value={register.firstname}
-              type="text"
-              id="firstname"
-              name="firstname"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-500">
-              Adresse mail
-            </label>
-            <input
-              className="border border-99A2A5 rounded-sm "
-              onChange={handleChange}
-              value={register.email}
-              type="text"
-              id="email"
-              name="email"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-500">
-              Mot de passe
-            </label>
-            <input
-              className="border border-99A2A5 rounded-sm "
-              onChange={handleChange}
-              value={register.password}
-              type="password"
-              id="password"
-              name="password"
-            />
-          </div>
-          <button
-            className="bg-secondary font-custom text-white px-3 py-2 rounded"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
