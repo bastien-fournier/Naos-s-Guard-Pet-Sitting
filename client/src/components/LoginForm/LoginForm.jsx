@@ -49,56 +49,61 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex border flex-col text-center bg-white rounded-md ">
-      <div>
-        <p className="text-secondary">Connexion</p>
-      </div>
-      <div>
-        <form method="post" onSubmit={handleSubmit}>
-          <div>
-            <input
-              className="border border-99A2A5 rounded-sm "
-              aria-required="true"
-              type="email"
-              id="email"
-              name="email"
-              value={loginInfos.email}
-              onChange={(e) =>
-                setLoginInfos({ ...loginInfos, email: e.target.value })
-              }
-              placeholder="Email"
-            />
-          </div>
-          <div>
-            <input
-              className="border border-99A2A5 rounded-sm"
-              autoComplete="new-password"
-              aria-required="true"
-              type="password"
-              id="password"
-              name="password"
-              value={loginInfos.password}
-              onChange={(e) =>
-                setLoginInfos({ ...loginInfos, password: e.target.value })
-              }
-              placeholder="Mot de passe"
-            />
-          </div>
-          {errors && <div>{errors}</div>}
-          <button
-            className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary mt-4"
-            type="submit"
+    <div className="flex justify-center mt-5">
+      <div className="flex flex-col items-center mx-auto max-w-sm border bg-white rounded-lg shadow-md p-4">
+        <div>
+          <p className="text-secondary">Connexion</p>
+        </div>
+        <div>
+          <form method="post" onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <input
+                className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                aria-required="true"
+                type="email"
+                id="email"
+                name="email"
+                value={loginInfos.email}
+                onChange={(e) =>
+                  setLoginInfos({ ...loginInfos, email: e.target.value })
+                }
+                placeholder="Email"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                autoComplete="new-password"
+                aria-required="true"
+                type="password"
+                id="password"
+                name="password"
+                value={loginInfos.password}
+                onChange={(e) =>
+                  setLoginInfos({ ...loginInfos, password: e.target.value })
+                }
+                placeholder="Mot de passe"
+              />
+            </div>
+            {errors && <div>{errors}</div>}
+            <button
+              className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom mt-5 hover:scale-105 transform transition duration-300"
+              type="submit"
+            >
+              Me connecter
+            </button>
+          </form>
+        </div>
+        <p className="text-secondary">Pas encore de compte ?</p>
+        <p>
+          <Link
+            className="text-secondary hover:text-blue-500"
+            to="/sign-up-page"
           >
-            Me connecter
-          </button>
-        </form>
+            M'inscrire
+          </Link>
+        </p>
       </div>
-      <p className="text-secondary">Pas encore de compte ?</p>
-      <p>
-        <Link className="text-secondary" to="/sign-up-page">
-          M'inscrire
-        </Link>
-      </p>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import LoginForm from "../components/LoginForm/LoginForm";
-import NavBar from "../components/NavBar/NavBar";
+import Logo from "../components/Logo/Logo";
 
 export default function LoginPage() {
   return (
     <>
-      <div>
-        <NavBar />
+      <div className="flex justify-between items-center mr-3 md:hidden">
+        <Logo />
       </div>
       <div className="flex justify-center items-center min-h-screen">
         <LoginForm />

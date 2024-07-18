@@ -1,0 +1,11 @@
+.divNav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .divNav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+  }
+}
