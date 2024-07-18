@@ -18,7 +18,7 @@ export default function ButtonLogin() {
     <div>
       <Link to="/profil-page">
         <button
-          className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom"
+          className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom hover:scale-105 transform transition duration-300"
           type="button"
         >
           {user.firstname}

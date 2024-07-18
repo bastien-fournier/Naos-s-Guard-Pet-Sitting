@@ -47,14 +47,11 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="flex justify-center mt-5">
+    <div className="flex justify-center mt-20">
       <div className="flex flex-col items-center mx-auto max-w-sm border bg-white rounded-lg shadow-md p-4">
         <form method="POST" onSubmit={handleSubmit}>
           <div className="mb-4 w-full">
             <div className="mb-4">
-              <label htmlFor="lastname" className="block text-gray-500">
-                Nom de famille
-              </label>
               <input
                 className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
                 onChange={handleChange}
@@ -62,12 +59,10 @@ export default function SignUpForm() {
                 type="text"
                 id="lastname"
                 name="lastname"
+                placeholder="Nom de famille"
               />
             </div>
             <div className="mb-4 w-full">
-              <label htmlFor="firstname" className="block text-gray-500">
-                Prénom
-              </label>
               <input
                 className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
                 onChange={handleChange}
@@ -75,12 +70,10 @@ export default function SignUpForm() {
                 type="text"
                 id="firstname"
                 name="firstname"
+                placeholder="Prénom"
               />
             </div>
             <div className="mb-4 w-full">
-              <label htmlFor="email" className="block text-gray-500">
-                Adresse mail
-              </label>
               <input
                 className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
                 onChange={handleChange}
@@ -88,12 +81,10 @@ export default function SignUpForm() {
                 type="text"
                 id="email"
                 name="email"
+                placeholder="Adresse mail"
               />
             </div>
             <div className="mb-4 w-full">
-              <label htmlFor="password" className="block text-gray-500">
-                Mot de passe
-              </label>
               <input
                 className="border border-gray-300 rounded-sm px-3 py-2 w-full focus:outline-none focus:border-blue-500"
                 onChange={handleChange}
@@ -101,6 +92,7 @@ export default function SignUpForm() {
                 type="password"
                 id="password"
                 name="password"
+                placeholder="Mot de passe"
               />
             </div>
             <button
