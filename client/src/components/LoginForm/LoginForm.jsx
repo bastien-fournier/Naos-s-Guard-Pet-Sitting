@@ -49,10 +49,10 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex justify-center mt-5">
+    <div className="flex justify-center ">
       <div className="flex flex-col items-center mx-auto max-w-sm border bg-white rounded-lg shadow-md p-4">
         <div>
-          <p className="text-secondary">Connexion</p>
+          <p className="text-secondary mb-3">Connexion</p>
         </div>
         <div>
           <form method="post" onSubmit={handleSubmit}>
@@ -94,10 +94,10 @@ export default function LoginForm() {
             </button>
           </form>
         </div>
-        <p className="text-secondary">Pas encore de compte ?</p>
+        <p className="text-secondary mt-3">Pas encore de compte ?</p>
         <p>
           <Link
-            className="text-secondary hover:text-blue-500"
+            className="text-secondary underline hover:text-blue-500"
             to="/sign-up-page"
           >
             M'inscrire

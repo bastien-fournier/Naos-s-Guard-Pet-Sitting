@@ -15,7 +15,7 @@ export default function BodyHomePage() {
           alt="page d'accueil"
         />
       </div>
-      <p className="text-white  mt-2">
+      <p className="text-white mb-6 mt-2">
         Bienvenue sur Naos'Guard Pet-Sitting, votre solution de confiance pour
         la garde de chiens. Offrez à votre compagnon à quatre pattes une
         expérience sécurisée et attentionnée, que ce soit pour une journée ou
