@@ -38,7 +38,7 @@ export default function SignUpForm() {
 
       const data = await response.json();
       console.info("Success:", data);
-      navigate("/");
+      navigate("/login-page");
       return data;
     } catch (err) {
       console.error("Fetch error:", err);
