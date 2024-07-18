@@ -5,8 +5,9 @@ export default function Profil() {
 
   return (
     <div>
-      <p>Bienvenu {`${user.firstname} ${user.lastname}`}</p>
-      {/* Utilisation de l'opérateur de chaînage optionnel pour éviter les erreurs si user est null ou undefined */}
+      <div>
+        <p>Bienvenu {`${user.firstname} ${user.lastname}`}</p>
+      </div>
     </div>
   );
 }

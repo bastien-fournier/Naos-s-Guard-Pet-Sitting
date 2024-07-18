@@ -2,9 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 import ShowReview from "../components/ShowReview/ShowReview";
 import FormReview from "../components/FormReview/FormReview";
-// import NavBar from "../components/NavBar/NavBar";
 
-import styles from "./ReviewPage.module.css";
 import Logo from "../components/Logo/Logo";
 
 export default function ReviewPage() {
@@ -16,7 +14,7 @@ export default function ReviewPage() {
         <Logo />
       </div>
       <div className="flex justify-center">
-        <div className={styles.divReviewContainer}>
+        <div>
           {reviews.map((review) => (
             <ShowReview
               key={review.id}

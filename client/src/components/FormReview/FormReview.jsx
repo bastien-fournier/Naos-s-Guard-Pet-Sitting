@@ -63,9 +63,9 @@ export default function FormReview() {
   };
 
   return (
-    <div className="flex justify-center mt-5 mb-5">
+    <div className="flex justify-center mt-5 mb-5 ">
       <form
-        className="bg-white p-6 rounded shadow-md w-full max-w-xs"
+        className="bg-white p-4 rounded shadow-md w-full max-w-xs md:max-w-lg lg:max-w-xl"
         onSubmit={handleSubmit}
       >
         <div>

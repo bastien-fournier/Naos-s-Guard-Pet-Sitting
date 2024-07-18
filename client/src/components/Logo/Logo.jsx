@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 
 import LogoNaos from "../../assets/images/logo.png";
-import styles from "./Logo.module.css";
 
 export default function Logo() {
   return (
-    <div className={styles.DivLogo}>
+    <div>
       <Link to="/">
         <img
-          className="w-20 hover:scale-105 transform transition duration-300"
+          className="w-20 ml-2 hover:scale-105 transform transition duration-300"
           src={LogoNaos}
           alt="Logo"
         />
