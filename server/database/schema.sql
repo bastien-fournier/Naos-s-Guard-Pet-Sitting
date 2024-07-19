@@ -11,7 +11,7 @@ create table review (
    rate int not null check (rate between 1 and 10),
    comment text,
    dog_id INT,
-   FOREIGN KEY (dog_id) REFERENCES user(id)
+   FOREIGN KEY (dog_id) REFERENCES dog(id)
 );
 
 create table dog (
