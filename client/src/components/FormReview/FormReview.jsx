@@ -70,7 +70,7 @@ export default function FormReview() {
       >
         <div>
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-secondary text-sm font-bold mb-2"
             htmlFor="comment"
           >
             Avis
@@ -84,7 +84,7 @@ export default function FormReview() {
             className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
           />
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-secondary text-sm font-bold mb-2"
             htmlFor="rate"
           >
             Note
@@ -94,7 +94,7 @@ export default function FormReview() {
             name="rate"
             id="rate"
             onChange={handleChange}
-            className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+            className="w-full px-3 py-2 border text-secondary rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
           >
             <option value="">Sélectionner une note</option>
             <option value="1">1</option>

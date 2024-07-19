@@ -11,9 +11,9 @@ export default function Profil() {
         <div>
           <img src={Dog} alt="Profil utilisateur" />
         </div>
-        <p>Bienvenu </p>
-        <p>{`${user.firstname} ${user.lastname}`}</p>
-        <p>Mon toutou (afficher nom ici)</p>
+        <p className="text-secondary">Bienvenue </p>
+        <p className="text-secondary">{`${user.firstname} ${user.lastname}`}</p>
+        <p className="text-secondary">Mon toutou (afficher nom ici)</p>
       </div>
     </div>
   );
