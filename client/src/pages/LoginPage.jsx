@@ -7,7 +7,7 @@ export default function LoginPage() {
       <div className="flex justify-between items-center mr-3 md:hidden">
         <Logo />
       </div>
-      <div className="flex justify-center items-center min-h-screen">
+      <div className="flex justify-center items-center mt-36">
         <LoginForm />
       </div>
     </>

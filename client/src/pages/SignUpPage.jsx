@@ -8,7 +8,7 @@ export default function SignUpPage() {
       <div className="flex justify-between items-center mr-3 md:hidden">
         <Logo />
       </div>
-      <div>
+      <div className="mt-36">
         <SignUpForm />
       </div>
     </>

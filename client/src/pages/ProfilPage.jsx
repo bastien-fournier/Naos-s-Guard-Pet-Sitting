@@ -9,9 +9,10 @@ export default function ProfilPage() {
       <div className="flex mr-3 md:hidden">
         <Logo />
       </div>
-
-      <Profil />
-      <ButtonDisconnected />
+      <div className="mt-36">
+        <Profil />
+        <ButtonDisconnected />
+      </div>
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function ButtonDisconnected() {
     <div>
       <button
         onClick={handleLogout}
-        className="flex items-center justify-center bg-secondary  text-white rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom mt-5 hover:scale-105 transform transition duration-300"
+        className="flex items-center justify-center bg-secondary  text-white rounded-md  mx-auto max-w-sm min-w-36 px-3 py-2 mb-1 border border-secondary shadow-custom mt-7 hover:scale-105 transform transition duration-300"
         type="button"
       >
         Se déconnecter
@@ -49,7 +49,7 @@ export default function ButtonDisconnected() {
         <button
           onClick={() => handleDelete(user.id)}
           type="button"
-          className="flex items-center justify-center bg-primary  text-secondary  rounded-md mx-auto max-w-sm min-w-32 px-3 py-2 mb-1 border border-secondary shadow-custom hover:scale-105 transform transition duration-300 md:hidden"
+          className="flex items-center justify-center bg-primary  text-secondary mt-3  rounded-md mx-auto max-w-sm min-w-36 px-3 py-2 mb-1 border border-secondary shadow-custom hover:scale-105 transform transition duration-300 md:hidden"
         >
           Supprimer
         </button>
